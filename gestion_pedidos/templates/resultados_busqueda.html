@@ -1,0 +1,14 @@
+<html>
+  <body>
+    {% if articulos %}
+    <h2>Resultado de la búsqueda de {{query}}</h2>
+    <p>Se han encontrado {{articulos|length}} artículo(s).</p>
+
+    <ul>
+      {% for articulo in articulos %}
+      <li>{{articulo.nombre}} - {{articulo.precio}} €</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </body>
+</html>
